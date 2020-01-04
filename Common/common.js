@@ -1,3 +1,6 @@
+const imgPath = 'https://raw.githubusercontent.com/it-crafts/mockapi/master';
+const loading = document.querySelector('#loading');
+
 const getData = async function(url, page) {
     const res = await fetch(url + page);
     const data = await res.json();
@@ -11,5 +14,5 @@ const getInfo = async function(url) {
 }
 
 export default {
-    getData, getInfo
+    imgPath, loading, getData, getInfo
 };
