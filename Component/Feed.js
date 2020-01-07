@@ -4,9 +4,6 @@ class Feed {
     constructor(param = {}) {
         this.$parent = param.parent;
         this.$elementsList = [];
-        this.create();
-    }
-    create() {
     }
     destroy() {
         [].concat(...this.$elementsList).forEach($el => {
