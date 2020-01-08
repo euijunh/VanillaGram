@@ -2,8 +2,13 @@ const Store = function() {
     const state = {};
     const notice = {};
 
-    const commit = function(key, value) {
-        state[key] = value;
+    const commit = function(key, value, opt = {}) {
+        if(!!opt.index || opt.index === 0) {
+            state[key][opt.index] = value;
+        } else {
+            state[key] = value;
+        }
+        // state[key] = value;
         notice[key] = notice[key] || [];
         notice[key].forEach(callback => callback());
     }
