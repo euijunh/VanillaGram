@@ -29,6 +29,7 @@ const Store = function() {
     }
 };
 
+// 전역 store
 const store = new Store();
 
-export { Store, store };
+export default { Store, store };
