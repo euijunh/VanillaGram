@@ -1,4 +1,3 @@
-// 프로토타입
 import store from "../Common/Store.js";
 
 class CartTotal {
