@@ -34,7 +34,7 @@ const Store = function() {
     }
 };
 
-// 전역 store
+// Global store
 const store = new Store();
 
 export default { Store, store };
