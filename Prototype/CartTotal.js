@@ -28,9 +28,6 @@ class CartTotal {
             </div>
           </div>
         </div>
-        <div class=" Igw0E rBNOH YBx95 ybXk5 _4EzTm soMvl ">
-          <button class="sqdOP L3NKy y3zKF " type="button">주문</button>
-        </div>
     `;
     this.$el.innerHTML = template;
     this._render();
