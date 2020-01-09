@@ -10,7 +10,7 @@ class Cart {
       render: null,
     };
     this._init();
-    this._page = new CartItem({parent : this.$parent, cartDataId: this.CART_DATA });
+    this.page = new CartItem({parent : this.$parent, cartDataId: this.CART_DATA });
   }
 
   _init() {
@@ -60,8 +60,8 @@ class Cart {
   destroy() {
     store.store.unsubscribe(this.CART_DATA, this.evnet.render);
     this.evnet.render = null;
-    this._page.destroy();
-    this._page = undefined;
+    this.page.destroy();
+    this.page = undefined;
     this.$parent.removeChild(this.$el);
     this.$el;
   }
