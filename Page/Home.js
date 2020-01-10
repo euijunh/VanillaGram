@@ -6,21 +6,14 @@ class Home {
     constructor(param = {}) {
         this.$parent = param.parent;
         this.$el;
-        this.render();
-        this.create();
+        this._render();
+        this._create();
         this.new = new New({ parent: this.$el.querySelector('#new') });
         this.theme = new Theme({ parent: this.$el.querySelector('#theme') });
     }
 
-    create() {
+    _create() {
         this.addEvent();
-    }
-
-    destroy() {
-        this.new.destroy();
-        this.theme.destroy();
-        this.$parent.removeChild(this.$el);
-        this.removeEvent();
     }
     
     addEvent() {
@@ -29,7 +22,7 @@ class Home {
     removeEvent() {
     }
 
-    render() {
+    _render() {
         const template = `
             <div>
                 <div id="theme"></div>
@@ -39,6 +32,13 @@ class Home {
         const { fragment, elements } = engine(template, [null]);
         this.$parent.appendChild(fragment);
         this.$el = elements[0];
+    }
+
+    destroy() {
+        this.new.destroy();
+        this.theme.destroy();
+        this.$parent.removeChild(this.$el);
+        this.removeEvent();
     }
 }
 
