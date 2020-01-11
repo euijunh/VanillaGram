@@ -5,11 +5,7 @@ class Feed {
         this.$parent = param.parent;
         this.$elementsList = [];
     }
-    destroy() {
-        [].concat(...this.$elementsList).forEach($el => {
-            this.$parent.removeChild($el);
-        });
-    }
+    
     render(data) {
         const template = `
             <article id="feed" class="M9sTE h0YNM SgTZ1">
@@ -75,6 +71,12 @@ class Feed {
         const { fragment, elements } = engine(template, data);
         this.$parent.appendChild(fragment);
         this.$elementsList.push(elements);
+    }
+    
+    destroy() {
+        [].concat(...this.$elementsList).forEach($el => {
+            this.$parent.removeChild($el);
+        });
     }
 }
 
