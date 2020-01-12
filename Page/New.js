@@ -9,7 +9,7 @@ class New extends ClickMore {
         super();
         this.$parent = param.parent;
         this.$el;
-        this.render();
+        this._render();
         this.$more = this.$el.querySelector('#more');
         this.$click = this.$el.querySelector('#click');
         this.$scroll = this.$el.querySelector('#scroll');
@@ -24,7 +24,7 @@ class New extends ClickMore {
     async _create() {
         await super.create();
         if(this.hasNext) {
-            this.addEvent();
+            this._addEvent();
         } else {
             this.$more.style.display = 'none';
         }
@@ -34,7 +34,13 @@ class New extends ClickMore {
         this.items.render(data);
     }
 
-    render() {
+    processData(list) {
+        list.forEach(data => {
+            data.img = common.imgPath + data.img;
+        });
+    }
+
+    _render() {
         const template = `
             <div class="v9tJq VfzDr">
                 <div class=" _2z6nI">
@@ -54,15 +60,9 @@ class New extends ClickMore {
         this.$el = elements[0];
     }
 
-    processData(list) {
-        list.forEach(data => {
-            data.img = common.imgPath + data.img;
-        });
-    }
-
     _initScroll() {
         this.$more.style.display = 'none';
-        this.removeEvent();
+        this._removeEvent();
 
         if(Object.setPrototypeOf && Object.getPrototypeOf) {
             Object.setPrototypeOf(Object.getPrototypeOf(this), ScrollMore.prototype);
@@ -71,10 +71,10 @@ class New extends ClickMore {
         }
 
         super.addEvent();
-        this.scroll();
+        this.event.scroll();
     }
 
-    finalScroll() {
+    _finalScroll() {
         if(Object.setPrototypeOf && Object.getPrototypeOf) {
             Object.setPrototypeOf(Object.getPrototypeOf(this), ClickMore.prototype);
         } else {
@@ -82,13 +82,13 @@ class New extends ClickMore {
         }
     }
 
-    addEvent() {
+    _addEvent() {
         super.addEvent();
         this.event.initScroll = this._initScroll.bind(this);
         this.$scroll.addEventListener('click', this.event.initScroll);
     }
 
-    removeEvent() {
+    _removeEvent() {
         super.removeEvent();
         this.$scroll.removeEventListener('click', this.event.initScroll);
     }
@@ -96,8 +96,8 @@ class New extends ClickMore {
     destroy() {
         this.items.destroy();
         this.$parent.removeChild(this.$el);
-        this.removeEvent();
-        this.finalScroll();
+        this._removeEvent();
+        this._finalScroll();
     }
 }
 
