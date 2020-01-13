@@ -36,7 +36,7 @@ class Root {
         while((tabIndexCheck = tabIndexCheck.previousElementSibling) != null ) {
             index++;
         }
-
+        
         Array.from(this.$navs)
             .filter(node => 1 === node.nodeType && node !== current)
             .forEach(other => {
@@ -52,7 +52,7 @@ class Root {
         this._page && this._page.destroy && this._page.destroy();
 
         switch(path) {
-            case '/home.htm':
+            case '/index.htm':
                 this._page = new Home({ parent: this.$page });
                 this.$navs[0].firstChild.className = this.$navs[0].firstChild.className.replace('outline', 'filled');
                 break;
