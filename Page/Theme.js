@@ -67,7 +67,6 @@ class Theme extends ClickMore {
         this.$more.style.display = 'none';
         this._removeEvent();
 
-        // HACK 런타임 부모클래스 강제변경
         if(Object.setPrototypeOf && Object.getPrototypeOf) {
             Object.setPrototypeOf(Object.getPrototypeOf(this), ScrollMore.prototype);
         } else {
@@ -75,11 +74,10 @@ class Theme extends ClickMore {
         }
 
         super.addEvent();
-        this.event.scroll(); // 스크롤 1회 강제호출
+        this.event.scroll();
     }
 
     _finalScroll() {
-        // HACK 런타임 부모클래스 강제변경
         if(Object.setPrototypeOf && Object.getPrototypeOf) {
             Object.setPrototypeOf(Object.getPrototypeOf(this), ClickMore.prototype);
         } else {
