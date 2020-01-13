@@ -37,14 +37,14 @@ class Root {
             index++;
         }
 
-        [].slice.call(this.$navs)
+        Array.from(this.$navs)
             .filter(node => 1 === node.nodeType && node !== current)
             .forEach(other => {
                 other.firstChild.className = other.firstChild.className.replace('filled', 'outline');
             });
         current.firstChild.className = current.firstChild.className.replace('outline', 'filled');
         this._route(current.pathname);
-        
+
         history.pushState({tabIndex : index}, document.title, current.pathname);
     }
 
