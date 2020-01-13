@@ -44,8 +44,8 @@ class Root {
             });
         current.firstChild.className = current.firstChild.className.replace('outline', 'filled');
         this._route(current.pathname);
-
-        history.pushState({tabIndex : index}, document.title, current.pathname);
+console.log(current.pathname)
+        history.pushState({tabIndex : index}, document.title, `.${current.pathname}`);
     }
 
     _route(path) {
