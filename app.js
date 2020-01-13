@@ -20,7 +20,7 @@ class Root {
     
     _create() {
         this._addEvent();
-        this._route(location.pathname.replace(/^\/project1/, ''));
+        this._route(location.pathname);
     }
 
     _click(e) {
@@ -43,9 +43,9 @@ class Root {
                 other.firstChild.className = other.firstChild.className.replace('filled', 'outline');
             });
         current.firstChild.className = current.firstChild.className.replace('outline', 'filled');
-        this._route(current.pathname.replace(/^\/project1/, ''));
+        this._route(current.pathname);
 
-        history.pushState({tabIndex : index}, document.title, current.pathname.replace(/^\/project1/, ''));
+        history.pushState({tabIndex : index}, document.title, `project1${current.pathname}`);
     }
 
     _route(path) {
