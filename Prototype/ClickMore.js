@@ -4,10 +4,12 @@ import More from './More.js';
 class ClickMore extends More {
     constructor() {
         super();
-        this._click = undefined;
+        this.event = {
+            click: null,
+        }
     }
     
-    async click(e) {
+    async _click() {
         if(!common.loading.style.display) {
             return;
         }
@@ -23,12 +25,12 @@ class ClickMore extends More {
     }
 
     addEvent() {
-        this._click = this.click.bind(this);
-        this.$click.addEventListener('click', this._click);
+        this.event.click = this._click.bind(this);
+        this.$click.addEventListener('click', this.event.click);
     }
 
     removeEvent() {
-        this.$click.removeEventListener('click', this._click);
+        this.$click.removeEventListener('click', this.event.click);
     }
 }
 
