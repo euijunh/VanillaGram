@@ -8,8 +8,8 @@ class Home {
         this.$el;
         this._render();
         this._create();
-        this.new = new New({ parent: this.$el.querySelector('#new') });
         this.theme = new Theme({ parent: this.$el.querySelector('#theme'), opt: {callingClass: "Home"} });
+        this.new = new New({ parent: this.$el.querySelector('#new') });
     }
 
     _create() {
