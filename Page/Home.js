@@ -9,7 +9,7 @@ class Home {
         this._render();
         this._create();
         this.new = new New({ parent: this.$el.querySelector('#new') });
-        this.theme = new Theme({ parent: this.$el.querySelector('#theme') });
+        this.theme = new Theme({ parent: this.$el.querySelector('#theme'), opt: {callingClass: "Home"} });
     }
 
     _create() {

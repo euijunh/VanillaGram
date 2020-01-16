@@ -9,7 +9,9 @@ class Theme extends ClickMore {
         super();
         this.$parent = param.parent;
         this.$el;
-        this._render();
+        this.opt = param.opt;
+        this.callingClass = (!!this.opt && this.opt.callingClass === "Home") ? 'display: none;' : 'display: "";';
+        this._render(this.callingClass);
         this.$more = this.$el.querySelector('.more');
         this.$click = this.$el.querySelector('.click');
         this.$scroll = this.$el.querySelector('.scroll');
@@ -28,6 +30,7 @@ class Theme extends ClickMore {
         } else {
             this.$more.style.display = 'none';
         }
+        console.log(this.event.initScroll)
     }
     
     renderMore(data) {
@@ -43,7 +46,7 @@ class Theme extends ClickMore {
         });
     }
 
-    _render() {
+    _render(display) {
         const template = `
             <div class="v9tJq VfzDr">
                 <div class=" _2z6nI">
@@ -52,7 +55,7 @@ class Theme extends ClickMore {
                         </div>
                         <div id="" class=" Igw0E rBNOH YBx95 ybXk5 _4EzTm soMvl more" style="margin-right: 8px">
                             <button id="" class="sqdOP L3NKy y3zKF _4pI4F click" type="button" style="margin: 16px 8px">더보기</button>
-                            <button id="" class="sqdOP L3NKy y3zKF _4pI4F scroll" type="button" style="margin: 16px 8px">전체보기</button>
+                            <button id="" class="sqdOP L3NKy y3zKF _4pI4F scroll" type="button" style="${display} margin: 16px 8px">전체보기</button>
                         </div>
                     </div>
                 </div>
@@ -87,12 +90,22 @@ class Theme extends ClickMore {
 
     _addEvent() {
         super.addEvent();
+        
+        if(!!this.opt && this.opt.callingClass === 'Home') {
+            return;
+        }
+
         this.event.initScroll = this._initScroll.bind(this);
         this.$scroll.addEventListener('click', this.event.initScroll);
     }
 
     _removeEvent() {
         super.removeEvent();
+        
+        if(!!this.opt && this.opt.callingClass === 'Home') {
+            return;
+        }
+
         this.$scroll.removeEventListener('click', this.event.initScroll);
     }
     

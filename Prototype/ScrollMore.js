@@ -4,10 +4,12 @@ import More from './More.js';
 class ScrollMore extends More {
     constructor() {
         super();
-        this._scroll;
+        this.event = {
+            scroll: null,
+        };
     }
-
-    async scroll(e) {
+    
+    async _scroll() {
         if(!common.loading.style.display) {
             return;
         }
@@ -23,14 +25,14 @@ class ScrollMore extends More {
             this.removeEvent();
         }
     }
-    
+
     addEvent() {
-        this._scroll = this.scroll.bind(this);
-        window.addEventListener('scroll', this._scroll);
+        this.event.scroll = this._scroll.bind(this);
+        window.addEventListener('scroll', this.event.scroll);
     }
-    
+
     removeEvent() {
-        window.removeEventListener('scroll', this._scroll);
+        window.removeEventListener('scroll', this.event.scroll);
     }
 }
 
