@@ -30,7 +30,6 @@ class Theme extends ClickMore {
         } else {
             this.$more.style.display = 'none';
         }
-        console.log(this.event.initScroll)
     }
     
     renderMore(data) {
