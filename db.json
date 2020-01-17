@@ -96,70 +96,80 @@
             "name": "상품명1",
             "text": "상품설명1",
             "clipCount": "999",
-            "commentCount": "99"
+            "commentCount": "99",
+            "price": "5000"
           },
           {
             "img": "/img/02.jpg",
             "name": "상품명2",
             "text": "상품설명2",
             "clipCount": "999",
-            "commentCount": "99"
+            "commentCount": "99",
+            "price": "7000"
           },
           {
             "img": "/img/03.jpg",
             "name": "상품명3",
             "text": "상품설명3",
             "clipCount": "999",
-            "commentCount": "99"
+            "commentCount": "99",
+            "price": "6000"
           },
           {
             "img": "/img/04.jpg",
             "name": "상품명4",
             "text": "상품설명4",
             "clipCount": "999",
-            "commentCount": "99"
+            "commentCount": "99",
+            "price": "10000"
           },
           {
             "img": "/img/05.jpg",
             "name": "상품명5",
             "text": "상품설명5",
             "clipCount": "999",
-            "commentCount": "99"
+            "commentCount": "99",
+            "price": "3000"
           },
           {
             "img": "/img/06.jpg",
             "name": "상품명6",
             "text": "상품설명6",
             "clipCount": "999",
-            "commentCount": "99"
+            "commentCount": "99",
+            "price": "1500"
           },
           {
             "img": "/img/07.jpg",
             "name": "상품명7",
             "text": "상품설명7",
             "clipCount": "999",
-            "commentCount": "99"
+            "commentCount": "99",
+            "price": "1600"
           },
           {
             "img": "/img/08.jpg",
             "name": "상품명8",
             "text": "상품설명8",
             "clipCount": "999",
-            "commentCount": "99"
+            "commentCount": "99",
+            "price": "500"
           },
           {
             "img": "/img/09.jpg",
             "name": "상품명9",
             "text": "상품설명9",
             "clipCount": "999",
-            "commentCount": "99"
+            "commentCount": "99",
+            "price": "700"
           },
           {
             "img": "/img/10.jpg",
             "name": "상품명10",
             "text": "상품설명10",
             "clipCount": "999",
-            "commentCount": "99"
+            "commentCount": "99",
+            "price": "12500"
           }
         ]
       },
@@ -171,7 +181,8 @@
               "name": "상품명11",
               "text": "상품설명11",
               "clipCount": "999",
-              "commentCount": "99"
+              "commentCount": "99",
+              "price": 6000
             },
             {
               "img": "/img/12.jpg",
