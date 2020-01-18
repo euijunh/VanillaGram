@@ -33,7 +33,7 @@ class Feed {
                         <span class="fr66n"><button class="dCJp8 afkep"><span aria-label="좋아요" class="glyphsSpriteHeart__outline__24__grey_9 u-__7"></span></button></span>
                         <span class="_15y0l"><button class="dCJp8 afkep"><span aria-label="댓글 달기" class="glyphsSpriteComment__outline__24__grey_9 u-__7"></span></button></span>
                         <span class="_5e4p"><button class="dCJp8 afkep"><span aria-label="게시물 공유" class="glyphsSpriteDirect__outline__24__grey_9 u-__7"></span></button></span>
-                        <span class="wmtNn"><button class="dCJp8 afkep"><span aria-label="저장" class="glyphsSpriteSave__outline__24__grey_9 u-__7"></span></button></span>
+                        <span class="wmtNn"><button class="dCJp8 afkep" data-name="{{ name }}" data-src="{{ img }}" data-price="{{ price }}"><span aria-label="저장" class="glyphsSpriteSave__outline__24__grey_9 u-__7"></span></button></span>
                     </section>
                     <section class="EDfFK ygqzn">
                         <div class=" Igw0E IwRSH eGOV_ ybXk5 vwCYk">
@@ -68,6 +68,7 @@ class Feed {
                 </div>
             </article>
         `;
+        
         const { fragment, elements } = engine(template, data);
         this.$parent.appendChild(fragment);
         this.$elementsList.push(elements);
