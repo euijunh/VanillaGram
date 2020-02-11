@@ -9,11 +9,12 @@ class New extends ClickMore {
         super();
         this.$parent = param.parent;
         this.$el;
+        this.CART_DATA = param.cartDataId;
         this._render();
         this.$more = this.$el.querySelector('.more');
         this.$click = this.$el.querySelector('.click');
         this.$scroll = this.$el.querySelector('.scroll');
-        this.url = 'https://my-json-server.typicode.com/it-crafts/mockapi/feed/';
+        this.url = 'https://my-json-server.typicode.com/euijunh/VanillaGram/feed/';
         this.event = {
             initScroll: undefined,
         }

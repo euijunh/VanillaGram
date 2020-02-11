@@ -4,11 +4,13 @@ import More from './More.js';
 class ScrollMore extends More {
     constructor() {
         super();
+        // TODO this.event.scroll이 외부에서 가시성이 없도록 재설계
         this.event = {
             scroll: null,
         };
     }
     
+    // FIXME 노출영역 끝을 기준으로 ajaxMore 부르도록, 스크롤 height 좌표 수정 (window나 document bottom이 아닌, 영역 bottom 좌표 기준으로)
     async _scroll() {
         if(!common.loading.style.display) {
             return;

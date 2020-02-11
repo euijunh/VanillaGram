@@ -51,9 +51,9 @@ class Root {
     _route(path) {
         this._page && this._page.destroy && this._page.destroy();
 
-        switch(path.replace(/^\/project1/, '')) {
+        switch(path.replace(/^\/VanillaGram/, '')) {
             case '/index.htm':
-                this._page = new Home({ parent: this.$page });
+                this._page = new Home({ parent: this.$page, cartDataId: this.CART_DATA });
                 this.$navs[0].firstChild.className = this.$navs[0].firstChild.className.replace('outline', 'filled');
                 break;
             case '/theme.htm':
@@ -61,7 +61,7 @@ class Root {
                 this.$navs[1].firstChild.className = this.$navs[1].firstChild.className.replace('outline', 'filled');
                 break;
             case '/new.htm':
-                this._page = new New({ parent: this.$page });
+                this._page = new New({ parent: this.$page, cartDataId: this.CART_DATA });
                 this.$navs[2].firstChild.className = this.$navs[2].firstChild.className.replace('outline', 'filled');
                 break;
             case '/cart.htm':

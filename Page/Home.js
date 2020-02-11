@@ -6,10 +6,11 @@ class Home {
     constructor(param = {}) {
         this.$parent = param.parent;
         this.$el;
+        this.CART_DATA = param.cartDataId;
         this._render();
         this._create();
         this.theme = new Theme({ parent: this.$el.querySelector('#theme'), opt: {callingClass: "Home"} });
-        this.new = new New({ parent: this.$el.querySelector('#new') });
+        this.new = new New({ parent: this.$el.querySelector('#new'), cartDataId: this.CART_DATA });
     }
 
     _create() {

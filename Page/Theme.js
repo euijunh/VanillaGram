@@ -15,7 +15,7 @@ class Theme extends ClickMore {
         this.$more = this.$el.querySelector('.more');
         this.$click = this.$el.querySelector('.click');
         this.$scroll = this.$el.querySelector('.scroll');
-        this.url = 'https://my-json-server.typicode.com/it-crafts/mockapi/feed/';
+        this.url = 'https://my-json-server.typicode.com/euijunh/VanillaGram/feed/';
         this.event = {
             initScroll: undefined,
         }
@@ -69,6 +69,7 @@ class Theme extends ClickMore {
         this.$more.style.display = 'none';
         this._removeEvent();
 
+        // HACK 런타임 부모클래스 강제변경
         if(Object.setPrototypeOf && Object.getPrototypeOf) {
             Object.setPrototypeOf(Object.getPrototypeOf(this), ScrollMore.prototype);
         } else {
@@ -76,10 +77,11 @@ class Theme extends ClickMore {
         }
 
         super.addEvent();
-        this.event.scroll();
+        this.event.scroll(); // 스크롤 1회 강제호출
     }
 
     _finalScroll() {
+        // HACK 런타임 부모클래스 강제변경
         if(Object.setPrototypeOf && Object.getPrototypeOf) {
             Object.setPrototypeOf(Object.getPrototypeOf(this), ClickMore.prototype);
         } else {

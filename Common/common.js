@@ -1,4 +1,4 @@
-const imgPath = 'https://raw.githubusercontent.com/it-crafts/mockapi/master';
+const imgPath = 'https://raw.githubusercontent.com/euijunh/VanillaGram/master';
 const loading = document.querySelector('#loading');
 
 const getData = async function(url, page) {
