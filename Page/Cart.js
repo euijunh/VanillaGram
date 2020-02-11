@@ -28,7 +28,7 @@ class Cart {
 
   load() {
     if(undefined === sessionStorage.cart) {
-        sessionStorage.cart = '[{"name":"상품명1","src":"https://raw.githubusercontent.com/euijunh/VanillaGram/master/img/01.jpg","price":5000,"quantity":2},{"name":"상품명2","src":"https://raw.githubusercontent.com/euijunh/VanillaGram/master/img/02.jpg","price":7000,"quantity":2},{"name":"상품명3","src":"https://raw.githubusercontent.com/euijunh/VanillaGram/master/img/03.jpg","price":6000,"quantity":3},{"name":"상품명4","src":"https://raw.githubusercontent.com/euijunh/VanillaGram/master/img/04.jpg","price":10000,"quantity":1},{"name":"상품명5","src":"https://raw.githubusercontent.com/euijunh/VanillaGram/master/img/05.jpg","price":3000,"quantity":5}]';
+        sessionStorage.cart = '[{"name":"상품명1","src":"https://raw.githubusercontent.com/euijunh/vanillagram/master/img/01.jpg","price":5000,"quantity":2},{"name":"상품명2","src":"https://raw.githubusercontent.com/euijunh/vanillagram/master/img/02.jpg","price":7000,"quantity":2},{"name":"상품명3","src":"https://raw.githubusercontent.com/euijunh/vanillagram/master/img/03.jpg","price":6000,"quantity":3},{"name":"상품명4","src":"https://raw.githubusercontent.com/euijunh/vanillagram/master/img/04.jpg","price":10000,"quantity":1},{"name":"상품명5","src":"https://raw.githubusercontent.com/euijunh/vanillagram/master/img/05.jpg","price":3000,"quantity":5}]';
     }
 
     const cartData = JSON.parse(sessionStorage.cart).map(item => {

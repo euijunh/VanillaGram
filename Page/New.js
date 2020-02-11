@@ -14,7 +14,7 @@ class New extends ClickMore {
         this.$more = this.$el.querySelector('.more');
         this.$click = this.$el.querySelector('.click');
         this.$scroll = this.$el.querySelector('.scroll');
-        this.url = 'https://my-json-server.typicode.com/euijunh/VanillaGram/feed/';
+        this.url = 'https://my-json-server.typicode.com/euijunh/vanillagram/feed/';
         this.event = {
             initScroll: undefined,
         }

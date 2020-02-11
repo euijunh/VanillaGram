@@ -51,7 +51,7 @@ class Root {
     _route(path) {
         this._page && this._page.destroy && this._page.destroy();
 
-        switch(path.replace(/^\/VanillaGram/, '')) {
+        switch(path.replace(/^\/vanillagram/, '')) {
             case '/index.htm':
                 this._page = new Home({ parent: this.$page, cartDataId: this.CART_DATA });
                 this.$navs[0].firstChild.className = this.$navs[0].firstChild.className.replace('outline', 'filled');
