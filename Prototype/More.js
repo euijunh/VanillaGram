@@ -2,7 +2,6 @@ import common from '../Common/common.js';
 
 class More {
     constructor() {
-        // TODO 아래 상태들 외부에서 가시성이 없도록 재설계
         this.data = [];
         this.page = 0;
         this.totalPage = 0;
@@ -18,7 +17,6 @@ class More {
     async ajaxMore() {
         const data = await this._fetchNextData();
         this.renderMore(data);
-        // FIXME _fetchNextData 완료 전에는 비정상작동
         const hasNext = this.page < this.totalPage;
         this.hasNext = hasNext;
         return hasNext;
@@ -43,9 +41,6 @@ class More {
         throw new Error('오버라이드 되지 않은 추상메소드 호출됨');
     }
 
-    processData(list) {
-        // TODO 필요시 오버라이드
-    }
 }
 
 export default More;

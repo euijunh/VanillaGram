@@ -1,7 +1,6 @@
 import CartTotal from "../Prototype/CartTotal.js";
 import store from "../Common/Store.js";
 
-// 컴포넌트 카트페이지
 class CartItem {
   constructor(param = {}) {
       this.$parent = param.parent;
@@ -29,7 +28,7 @@ class CartItem {
     this._addEvent();
   }
   
-  save() { // 영속성, DB 데이터 수정
+  save() {
       sessionStorage.cart = JSON.stringify(store.store.state[this.CART_DATA]);
   }
 
@@ -92,6 +91,7 @@ class CartItem {
     totalWrapper.querySelector('.itemQuantity').innerText = data.quantity;
     totalWrapper.querySelector('.itemTotal').innerText = data.total;
 
+    // 바뀐 데이터만 커밋
     store.store.commit(this.CART_DATA, store.store.state[this.CART_DATA][index], {index: index});
   }
 
