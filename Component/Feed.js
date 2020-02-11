@@ -12,7 +12,7 @@ class Feed {
                 <header class="Ppjfr UE9AK wdOqh">
                     <div class="RR-M- h5uC0 mrq0Z" role="button" tabindex="0">
                         <canvas class="CfWVH" height="126" width="126" style="position: absolute; top: -5px; left: -5px; width: 42px; height: 42px;"></canvas>
-                        <span class="_2dbep" role="link" tabindex="0" style="width: 32px; height: 32px;"><img alt="twicetagram님의 프로필 사진" class="_6q-tv" src="https://scontent-icn1-1.cdninstagram.com/vp/60d5672c78325263e8a9b6d7bf4d8550/5E87F77A/t51.2885-19/s150x150/14350502_2130269970532564_1274547492301570048_a.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com"></span>
+                        <span class="_2dbep" role="link" tabindex="0" style="width: 32px; height: 32px;"><img alt="twicetagram님의 프로필 사진" class="_6q-tv" src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/14350502_2130269970532564_1274547492301570048_a.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&amp;_nc_ohc=JwWDpxDZj0MAX8PAeqx&amp;oh=c7d7f94b48c33064eb3872880f4faa3d&amp;oe=5ED7117A"></span>
                     </div>
                     <div class="o-MQd">
                         <div class="e1e1d">
