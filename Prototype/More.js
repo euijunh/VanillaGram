@@ -1,6 +1,5 @@
 import common from '../Common/common.js';
 
-// 데이터 탭이동마다 중복 요청함 한번 받아온 데이터 공통화 방안 고민
 class More {
     constructor() {
         // TODO 아래 상태들 외부에서 가시성이 없도록 재설계
@@ -12,7 +11,6 @@ class More {
 
     async create() {
         await Promise.all([this._fetchTotalPage(), this.ajaxMore()]);
-        // HACK hasNext 재계산 로직 ajaxFeedMore로 공통화방안 고민
         const hasNext = this.page < this.totalPage;
         this.hasNext = hasNext;
     }

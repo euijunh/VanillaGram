@@ -92,7 +92,6 @@ class CartItem {
     totalWrapper.querySelector('.itemQuantity').innerText = data.quantity;
     totalWrapper.querySelector('.itemTotal').innerText = data.total;
 
-    // 바뀐 데이터만 커밋
     store.store.commit(this.CART_DATA, store.store.state[this.CART_DATA][index], {index: index});
   }
 
