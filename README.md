@@ -1,4 +1,4 @@
-# 프론트엔드 개발 프로젝트 2020
+# 2020 front-end develop
 ## SPA development with Vanilla JavaScript
 
 [Vanilla JavaScript SPA](https://euijunh.github.io/vanillagram/index.htm)
